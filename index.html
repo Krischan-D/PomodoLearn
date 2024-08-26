@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">PomodoLearn</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li >
+                <label class="switch">
+                <input type="checkbox" class="toggleSwitch">
+                <span class="slider"></span>
+                </label>
+            </li>
+
+        </ul>
+    </nav>
+
+    <nav id="hamburger-nav">
+
+        <div class="logo">PomodoLearn</div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="menu-links" id="menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li >
+                    <label class="switch">
+                        <input type="checkbox" class="toggleSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <main>
+        <div class="hero-text">
+            <div class="upper-text text">Your Tasks, Simplified</div>
+            <div class="lower-text text">Manage your tasks effortlessly with our intuitive To-Do list.</div>
+        </div>
+
+        <div class="row">
+            <div class="col1 col">
+                <div class="clock-name">Timer</div>
+                <div class="clock">
+
+                    <div class="main-container center">
+                        <audio id="stop-sound" src="assets/alarmSound.mp3" preload="auto"></audio>
+
+                        <div class="circle-container center" id="timer">
+                            <div class="semicircle"></div>
+                            <div class="semicircle"></div>
+                            <div class="semicircle"></div>
+                            <div class="outermost-circle"></div>
+
+
+                            <div class="timer-container center">
+                                <div class="timer center">
+                                    <div>00</div>
+                                    <div class="colon">:</div>
+                                    <div>00</div>
+                                    <div class="colon">:</div>
+                                    <div>00</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="buttons">
+                            <button id="pauseBtn"><i class='bx bx-pause' id="pauseBtn"></i></button>
+                            <button id="resumeBtn"><i class='bx bx-play' id="resumeBtn"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <form action="" id="taskForm">
+                        <div class="set-timer">Set up timer</div>
+                        <div class="set-up-timer">
+
+
+                            <div class="input-field">
+                                <label for="">Hours</label>
+                                <input type="number" placeholder="Enter hours" class="hours">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Minutes</label>
+                                <input type="number" placeholder="Enter minutes" class="minutes">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Seconds</label>
+                                <input type="number" placeholder="Enter seconds" class="seconds">
+                            </div>
+
+                        </div>
+
+                        <div class="set-timer set-up-break">Set up break</div>
+                        <div class="set-up-timer">
+                            <div class="input-field">
+                                <label for="">Time</label>
+                                <input type="text" placeholder="Enter time" class="breakTime">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Category</label>
+                                <select name="" id="breakTimeCategory">
+                                    <option value="minutes">Minutes</option>
+                                    <option value="hours">Hours</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    <div class="startBtn">
+                        <input type="submit" name="" id="startTimerButton" value="Start timer">
+                    </div>
+                        
+                        <!-- <button id="startBtn">Start timer</button> -->
+                    </form>
+                </div>
+
+            </div>
+            <div class="col2 col">
+
+                <div class="todo-list-container">
+
+                    <div class="todo-container">
+                        <h1>To-Do List</h1>
+                        <div class="todoTH">
+                            <span class="todoTitle">To do</span>
+                            <span class="status">Status</span>
+                        </div>
+                        <ul id="taskList">
+                            <li>
+                                <div class="box-text">
+                                    <input type="checkbox" class="checkBox">
+                                    <span class="task-text">${taskValdwddwadwadawadwadwadwawadawdadwddue}</span>
+                                </div>
+
+
+                                <div class="taskButtons">
+                                    <span class="statusType">Pending..</span>
+                                   
+                                    <button class="edit-btn"><i class='bx bx-edit-alt'></i></button>
+                                    <button class="delete-btn"><i class='bx bx-x'></i></button>
+                                   
+                                    <button class="done-btn">Mark as done</button>
+                                </div>
+
+                                <div class="dropDownTask"></div>
+                            </li>
+                        </ul>
+                        <div class="add-container">
+                            <input type="text" id="taskInput" placeholder="Add a new task">
+                            <button class="addBtn">Add Task</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+<script type="module"       src="main.js "></script>
+</body>
+
+</html>
